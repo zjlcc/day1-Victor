@@ -7,14 +7,14 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 class MultiplicationTableBuilderTest {
     @Test
-    void should_return_multiply_table_when_build_given_start_number_2_end_number_5() {
+    void should_return_multiply_table_when_build_given_start_number_2_end_number_4() {
         //given
         MultiplicationTableBuilder builder = new MultiplicationTableBuilder();
         int start = 2;
         int end = 4;
         //when
         String multiplicationTable = builder.build(start, end);
-        String expectedMultiplicationTable = String.format("2*2=4%n2*3=6  3*3=9%n2*4=8  3*4=12  4*4=16%n");
+        String expectedMultiplicationTable = String.format("2*2=4%n2*3=6 3*3=9%n2*4=8 3*4=12 4*4=16%n");
         //then
         assertEquals(expectedMultiplicationTable, multiplicationTable);
     }
