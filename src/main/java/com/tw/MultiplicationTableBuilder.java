@@ -1,5 +1,8 @@
 package com.tw;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MultiplicationTableBuilder {
 
     public static void main(String[] args) {
@@ -13,5 +16,9 @@ public class MultiplicationTableBuilder {
 
     public String build(int start, int end) {
         return "";
+    }
+
+    public boolean verifyParamScope(int number){
+        return number >= 1 && number <= 1000;
     }
 }
