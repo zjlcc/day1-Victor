@@ -32,4 +32,8 @@ public class MultiplicationTableBuilder {
         boolean isStartSmallerThanOrEqualEnd = isStartSmallerOrEqualThanEnd(start, end);
         return isEndValid && isStartValid && isStartSmallerThanOrEqualEnd;
     }
+
+    public String printMultiplicationItem(int row, int col){
+        return col + "*" + row + "=" + row * col;
+    }
 }
