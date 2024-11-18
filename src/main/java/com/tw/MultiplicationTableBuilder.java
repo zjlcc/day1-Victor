@@ -17,7 +17,10 @@ public class MultiplicationTableBuilder {
     }
 
     public String build(int start, int end) {
-        return "";
+        if(!verifyParams(start, end)){
+            return null;
+        }
+        return printMultiplicationMap(start, end)+"\r\n";
     }
 
     public boolean verifyParamScope(int number){
