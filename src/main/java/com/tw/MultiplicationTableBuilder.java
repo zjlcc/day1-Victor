@@ -21,4 +21,8 @@ public class MultiplicationTableBuilder {
     public boolean verifyParamScope(int number){
         return number >= 1 && number <= 1000;
     }
+
+    public boolean isStartSmallerOrEqualThanEnd(int start, int end){
+        return start <= end;
+    }
 }
