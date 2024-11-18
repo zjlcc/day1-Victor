@@ -44,4 +44,10 @@ public class MultiplicationTableBuilder {
                 .mapToObj(i -> printMultiplicationItem(row, i))
                 .collect(Collectors.joining(" "));
     }
+
+    public String printMultiplicationMap(int start, int end) {
+        return IntStream.rangeClosed(start, end)
+                .mapToObj(i -> printMultiplicationRow(start, i))
+                .collect(Collectors.joining("\r\n"));
+    }
 }
