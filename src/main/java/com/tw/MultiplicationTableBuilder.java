@@ -25,4 +25,11 @@ public class MultiplicationTableBuilder {
     public boolean isStartSmallerOrEqualThanEnd(int start, int end){
         return start <= end;
     }
+
+    public boolean verifyParams(int start, int end){
+        boolean isStartValid = verifyParamScope(start);
+        boolean isEndValid = verifyParamScope(end);
+        boolean isStartSmallerThanOrEqualEnd = isStartSmallerOrEqualThanEnd(start, end);
+        return isEndValid && isStartValid && isStartSmallerThanOrEqualEnd;
+    }
 }
